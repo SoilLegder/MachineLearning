@@ -40,10 +40,17 @@ deactivate nondestructive
 if [ "${OSTYPE:-}" = "cygwin" ] || [ "${OSTYPE:-}" = "msys" ] ; then
     # transform D:\path\to\venv to /d/path/to/venv on MSYS
     # and to /cygdrive/d/path/to/venv on Cygwin
+<<<<<<< HEAD
     export VIRTUAL_ENV=$(cygpath 'C:\projects\soilledger-projects\ml-service\venv')
 else
     # use the path as-is
     export VIRTUAL_ENV='C:\projects\soilledger-projects\ml-service\venv'
+=======
+    export VIRTUAL_ENV=$(cygpath 'C:\Projects\soilledger-projects\ml-service\venv')
+else
+    # use the path as-is
+    export VIRTUAL_ENV='C:\Projects\soilledger-projects\ml-service\venv'
+>>>>>>> ba4c9b6 (Reset Git cache and properly ignore venv directory)
 fi
 
 _OLD_VIRTUAL_PATH="$PATH"
